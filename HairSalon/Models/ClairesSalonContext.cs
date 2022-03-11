@@ -1,11 +1,11 @@
 using Microsoft.EntityFrameworkCore;
-namespace ClairesSalon.Models
+namespace HairSalon.Models
 {
-  public class ClairesSalonContext : DbContext
+  public class HairSalonContext : DbContext
   {
     //Change to class the DB is dealing with
     public DbSet<Item> Items { get; set; }
-    public ClairesSalonrContext(DbContextOptions options) : base(options) { }
+    public HairSalonContext(DbContextOptions options) : base(options) { }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
       optionsBuilder.UseLazyLoadingProxies();

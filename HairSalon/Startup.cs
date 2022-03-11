@@ -3,9 +3,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using ClairesSalon.Models;
+using HairSalon.Models;
 using Microsoft.EntityFrameworkCore;
-namespace ClairesSalon
+namespace HairSalon
 {
   public class Startup
   {
@@ -22,7 +22,7 @@ namespace ClairesSalon
     {
       services.AddMvc();
       services.AddEntityFrameworkMySql()
-        .AddDbContext<ClairesSalonContext>(options => options
+        .AddDbContext<HairSalonContext>(options => options
         .UseMySql(Configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(Configuration["ConnectionStrings:DefaultConnection"])));
     }
     public void Configure(IApplicationBuilder app)
