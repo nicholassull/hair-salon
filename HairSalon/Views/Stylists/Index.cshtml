@@ -15,10 +15,10 @@
 @foreach (Stylist stylist in Model)
 {
   <div class="stylist-container my-3">
-    @Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId}, new { @class = "btn btn-light" })
+    @Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId}, new { }) 
     <p>Specialty: @stylist.Specialty</p>
   </div>
 }
 <hr />
-@Html.ActionLink("Add Stylist", "Create", new {}, new { @class = "btn btn-outline-primary" })
+@Html.ActionLink("Add Stylist", "Create", "Stylists", new {}, new { @class = "btn btn-outline-primary" })
 @Html.ActionLink("Home", "Index", "Home", new {}, new { @class = "btn btn-outline-primary" })
