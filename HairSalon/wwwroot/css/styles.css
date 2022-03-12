@@ -23,7 +23,8 @@ html, body {
   text-overflow: ellipsis;
 }
 .client-container {
-  background-color: rgb(146, 238, 207);
+  background-color: rgb(166, 253, 188);
+  border: solid rgb(143, 90, 192) 2px;
   border-radius: 10px;
   width: 13%;
   padding: 7px;

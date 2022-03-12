@@ -5,7 +5,7 @@
 @model HairSalon.Models.Client;
 @using HairSalon.Models;
 
-<h2>Client Details</h2>
+<h2 class="my-2">Client Details</h2>
 <hr />
 <h3>@Html.DisplayFor(model => model.Name) | <span id="stylist-span">@Html.DisplayNameFor(model => model.Stylist): @Html.ActionLink($"{@Model.Stylist.Name}", "Details", "Stylists", new { id = Model.StylistId })</span></h3>
 <p>Hair Type: @Html.DisplayFor(model => model.HairType)</p>
