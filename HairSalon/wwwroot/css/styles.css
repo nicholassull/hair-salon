@@ -1,13 +1,3 @@
-div#footer {
-  position:fixed;
-  bottom:0px;
-  left:0px;
-  width:100%;
-  color:#CCC;
-  background:#333;
-  padding:8px;
-}
-
 html, body {
   height: 95%;
 }
@@ -17,6 +7,8 @@ html, body {
   max-width: 900px;
   min-width: 400px;
   height: 100%;
+  padding: 10px 20px;
+  margin-top: 10px;
 }
 
 .stylist-container {
@@ -46,4 +38,14 @@ form {
 
 #stylist-span {
   font-size: 80%;
+}
+
+div#footer {
+  position:fixed;
+  bottom:0px;
+  left:0px;
+  width:100%;
+  color:#CCC;
+  background:#333;
+  padding:8px;
 }

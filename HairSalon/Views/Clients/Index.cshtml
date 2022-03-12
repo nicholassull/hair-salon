@@ -12,12 +12,14 @@
   <h3>You haven't added any clients yet!</h3>
   <p>Click below to add a new client.</p>
 }
-@foreach (Client client in Model)
-{
-  <div class="client-container my-3">
-    @Html.ActionLink($"{client.Name}", "Details", new { id = client.ClientId}, new { }) 
-  </div>
-}
-
+<div class="row justify-content-center">
+  @foreach (Client client in Model)
+  {
+    <div class="client-container my-3">
+      @Html.ActionLink($"{client.Name}", "Details", new { id = client.ClientId}, new { }) 
+    </div>
+  }
+</div>
+<hr /> 
 @Html.ActionLink("Add Client", "Create", new {}, new { @class = "btn btn-outline-primary" })
 @Html.ActionLink("Home", "Index", "Home", new {}, new { @class = "btn btn-outline-primary" })
