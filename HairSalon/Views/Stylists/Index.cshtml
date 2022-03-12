@@ -12,12 +12,12 @@
   <p>Click below to add a new stylist.</p>
 }
 @* Make Stylist-containers show up in a row *@
-<div class="row">
+<div class="row justify-content-center">
   @foreach (Stylist stylist in Model)
   { 
     <div class="stylist-container my-3">
       @Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId}, new { }) 
-      <p>Specialty: @stylist.Specialty</p>
+      <p>Specialty <br> <strong>@stylist.Specialty</strong></p>
     </div>
   }
 </div>

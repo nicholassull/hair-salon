@@ -10,16 +10,32 @@
 <h3>@Html.DisplayFor(model => model.Name)</h3>
 <p>@Html.DisplayNameFor(model => model.Specialty): @Html.DisplayFor(model => model.Specialty)</p>
 <p>Hourly Rate: $@Html.DisplayFor(model => model.HourlyRate)</p>
-<ul id="child-clients-ul">
-  @if (Model.Clients.Count() == 0)
-  {
-    <h5 class="text-center">@Html.DisplayFor(model => model.Name) has no clients! Click "Create Client" below to add one.</h5>
-  }
+
+@if (Model.Clients.Count() == 0)
+{
+  <h5 class="text-center">@Html.DisplayFor(model => model.Name) has no clients! Click "Create Client" below to add one.</h5>
+}
+
+<table id="child-clients-table" class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Hair Type</th>
+    </tr>
+    </tr>
+  </thead>
+  <tbody>
   @for (int i = 0; i < Model.Clients.Count(); i++)
   {
-    <li>Name: @Html.ActionLink($"{@Model.Clients.ElementAt(i).Name}", "Details", "Clients", new {id = @Model.Clients.ElementAt(i).ClientId})</li>
+    <tr>
+      <td scope="row">@(i+1)</td>
+      <td>@Html.ActionLink($"{@Model.Clients.ElementAt(i).Name}", "Details", "Clients", new {id = @Model.Clients.ElementAt(i).ClientId})</td>
+      <td>@Model.Clients.ElementAt(i).HairType</td>
+    </tr>
   }
-</ul>
+  </tbody> 
+</table>
 <hr />
 @Html.ActionLink("Create Client", "Create", "Clients", new {}, new { @class = "btn btn-outline-primary" })
 @Html.ActionLink("Delete", "Delete", new {id = Model.StylistId}, new { @class = "btn btn-outline-primary" })
