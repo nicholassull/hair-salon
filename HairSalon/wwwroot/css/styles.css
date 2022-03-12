@@ -27,8 +27,20 @@ html, body {
   margin: 0px 10px;
   text-align: center;
 }
+.client-container {
+  background-color: rgb(146, 238, 207);
+  border-radius: 10px;
+  width: 13%;
+  padding: 7px;
+  margin: 0px 10px;
+  text-align: center;
+}
 
 form {
   min-width: 500px;
   max-width: 600px;
+}
+
+#stylist-span {
+  font-size: 80%;
 }

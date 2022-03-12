@@ -2,7 +2,7 @@
   Layout = "_Layout";
 }
 @model HairSalon.Models.Stylist;
-<h2>Edit Stylist</h2>
+<h2>Edit Stylist Details</h2>
 <hr />
 <div class="my-4 row justify-content-center">
   @using (Html.BeginForm())
@@ -20,7 +20,9 @@
       <label for="HourlyRate">Hourly Rate</label>
       @Html.TextBoxFor(model => model.HourlyRate, new { @class = "form-control"})
     </div>
-    <input type="submit" value="Save" class="btn btn-outline-success" />
+    <div class="text-center">
+          <input type="submit" value="Save Changes" class="btn btn-outline-success">
+    </div>
   }
 </div>
 

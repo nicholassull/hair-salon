@@ -5,8 +5,8 @@
 @using HairSalon.Models;
 @model HairSalon.Models.Client;
 
-<h2>Add Client</h2>
-<div class="my-5 row justify-content-center">
+<h2>Edit Client Details</h2>
+<div class="my-4 row justify-content-center">
   @using (Html.BeginForm())
   {
     <div class="form-group">
@@ -22,7 +22,7 @@
         @Html.DropDownList("StylistId")
     </div>
     <div class="text-center">
-          <input type="submit" value="Add Stylist" class="btn btn-outline-success" />
+          <input type="submit" value="Save Changes" class="btn btn-outline-success">
     </div>
   }
 </div>
