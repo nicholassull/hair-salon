@@ -1,12 +1,13 @@
 @{
   Layout = "_Layout";
 }
-@model HairSalon.Models.Stylist
-
-<h2>Add a new stylist</h2>
-<div class="my-5 row justify-content-center">
+@model HairSalon.Models.Stylist;
+<h2>Edit Stylist</h2>
+<hr />
+<div class="my-4 row justify-content-center">
   @using (Html.BeginForm())
   {
+    @Html.HiddenFor(model => model.StylistId)
     <div class="form-group">
       @Html.LabelFor(model => model.Name)
       @Html.TextBoxFor(model => model.Name, new { @class = "form-control"})
@@ -19,10 +20,8 @@
       <label for="HourlyRate">Hourly Rate</label>
       @Html.TextBoxFor(model => model.HourlyRate, new { @class = "form-control"})
     </div>
-    <div class="text-center">
-          <input type="submit" value="Add Stylist" class="btn btn-outline-success" />
-    </div>
+    <input type="submit" value="Save" class="btn btn-outline-success" />
   }
 </div>
-<hr />
-@Html.ActionLink("View Stylist", "Index", new {}, new { @class = "btn btn-outline-primary" })
+
+@Html.ActionLink("Back", "Index", "Stylists", new {}, new { @class = "btn btn-outline-primary" })

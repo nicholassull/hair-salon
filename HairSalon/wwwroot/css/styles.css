@@ -27,3 +27,8 @@ html, body {
   margin: 0px 10px;
   text-align: center;
 }
+
+form {
+  min-width: 500px;
+  max-width: 600px;
+}
