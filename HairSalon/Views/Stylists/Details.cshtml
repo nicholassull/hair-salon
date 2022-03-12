@@ -1,0 +1,26 @@
+@{
+  Layout = "_Layout";
+}
+
+@model HairSalon.Models.Stylist;
+@using HairSalon.Models;
+
+<h2>Stylist Details</h2>
+<hr />
+<h3>@Html.DisplayFor(model => model.Name)</h3>
+<p>@Html.DisplayNameFor(model => model.Specialty): @Html.DisplayFor(model => model.Specialty)</p>
+<p>Hourly Rate: $@Html.DisplayFor(model => model.HourlyRate)</p>
+<ul id="child-clients-ul">
+  @if (Model.Clients.Count() == 0)
+  {
+    <h5 class="text-center">@Html.DisplayFor(model => model.Name) has no clients! Click "Create Client" below to add one.</h5>
+  }
+  @for (int i = 0; i < Model.Clients.Count(); i++)
+  {
+    <li>Name: @Html.ActionLink($"{@Model.Clients.ElementAt(i).Name}", "Details", "Clients", new {id = @Model.Clients.ElementAt(i).ClientId})</li>
+  }
+</ul>
+<hr />
+@Html.ActionLink("Delete", "Delete", new {id = Model.StylistId}, new { @class = "btn btn-outline-primary" })
+@Html.ActionLink("Edit", "Edit", new { id = Model.StylistId}, new { @class = "btn btn-outline-primary" })
+@Html.ActionLink("Back", "Index", new {}, new { @class = "btn btn-outline-primary" })
