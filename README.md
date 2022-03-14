@@ -24,7 +24,7 @@ This project was intended to showcase my understanding of Entity Framework and w
 * _Open your terminal and navigate to the folder you'd like to download the files into._
 * _Run the command below_
 > git clone https://github.com/nicholassull/hair-salon.git
-* _Using MySQL Workbench, import nicholas_sullivan.sql to create a local instance of the database._
+* _Using [MySQL Workbench](https://www.mysql.com/products/workbench/), import nicholas_sullivan.sql to create a local instance of the database._
 * Within the directory ~/HairSalon, create a file named appsettings.json and input the lines of code bellow.
 > {
   "ConnectionStrings": {
