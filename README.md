@@ -16,7 +16,7 @@
 
 ## Description
 
-This application provides salon owners and managers with an easy way to track their stylists and clients. The user can create instances of different stylists with their own specialties and hourly rates. The user can also create different clients that will be associated with a particular hair stylist. That way, its easy to track which clients go to which stylist. The ability to update or delete the details of each is also included in the application. <br>
+This application provides salon owners and managers with an easy way to track their stylists and clients. The user can create instances of different stylists with their own specialties and hourly rates. The user can also create different clients that will be associated with a particular hair stylist. That way, its easy to track which clients go to which stylist. The ability to update or delete the details of each is also included in the application. <br> <br>
 This project was intended to showcase my understanding of Entity Framework and working with SQL databases within MVC architecture. 
 
 ## Setup Instructions
