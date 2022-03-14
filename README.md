@@ -25,13 +25,13 @@ This project was intended to showcase my understanding of Entity Framework and w
 * _Run the command below_
 > git clone https://github.com/nicholassull/hair-salon.git
 * _Using [MySQL Workbench](https://www.mysql.com/products/workbench/), import nicholas_sullivan.sql to create a local instance of the database._
-* Within the directory ~/HairSalon, create a file named appsettings.json and input the lines of code bellow.
+* _Within the directory ~/HairSalon, create a file named appsettings.json and input the lines of code bellow._
 > {
   "ConnectionStrings": {
       "DefaultConnection": "Server=localhost;Port=3306;database=nicholas_sullivan;uid=root;pwd=[YOUR-PASSWORD];"
   }
 }
-  * Replace [YOUR-PASSWORD] with the password you created within MySQL Workbench, and make sure the port and database name match your own.
+  * _Replace [YOUR-PASSWORD] with the password you created within MySQL Workbench, and make sure the port and database name match your own._
 
 * _Navigate to HairSalon.Solution/HairSalon in your terminal._
 * _Run the commands below_
